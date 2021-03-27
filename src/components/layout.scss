@@ -1,3 +1,6 @@
+$bg-dark: #151031;
+$pink: #FFC1F9;
+$blue: #69D6D7;
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -6,10 +9,11 @@ html {
   overflow-y: scroll;
 }
 body {
+  background-color: $bg-dark;
+  color: white;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
   font-family: "Barlow", serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -20,41 +24,104 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
-$bd-dark: #151031;
-$pink: #FFC1F9;
-$blue: #69D6D7;
+ul, li { margin-left: 0; padding-left: 0; }
+ul {
+    list-style:none;
+}
+ul, li { /* reset the margin and padding */
+    margin: 0 ;
+    padding: 0 ;
+}
+
+.comment ul ul ul ul ul {
+     /* stop the nesting! */
+    margin-left: 0;
+    padding: 0;
+}
+
+.header-container {
+  position: relative;
+  h1 {
+    margin-bottom: 16px;
+  }
+  p.intro-text {
+    color: $pink;
+    font-size: 26px;
+    line-height: 31px;
+  }
+}
+
+
+
+.avatar-container {
+  position: sticky; // See link
+  top: 0; //to make it stick to the top of the screen
+  height: 100vh; // make the height equal to 100 view height
+  box-sizing: border-box;
+  text-align: center;
+
+
+  .list-container {
+    margin-top: 24px;
+    .name {
+      color: $pink;
+    }
+    li {
+      color: $blue;
+    }
+  }
+}
 
 
 .grid-container {
+  margin-top: 128px;
   display: grid;
   grid-template-columns: 0.6fr 1.4fr;
   grid-template-rows: 0.5fr 1.4fr;
   gap: 0px 56px;
   grid-template-areas:
     "avatar-container header-container"
-    "list-container body-container";
 }
 
 .avatar-container { grid-area: avatar-container; }
 
 .header-container { grid-area: header-container; }
 
-.body-container { grid-area: body-container; }
 
-.list-container { grid-area: list-container; }
+.avatar-container {
+  margin: 0 auto;
+}
+
+.list-container {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+
+  .list-1 {
+    margin-bottom: 48px;
+  }
+
+
+  li {
+    padding-bottom: 4px;
+  }
+}
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 520px) {
+
   .grid-container {
+    margin-top: 24px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "avatar-container" "header-container" "body-container";
     gap: 0px 0px;
   }
+
   .list-container {
   display: none;
-}
+  }
 
 }
 
@@ -121,9 +188,9 @@ h1 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: "Barlow", serif;
-  font-weight: bold;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 48px;
   line-height: 1.1;
 }
 mark {
@@ -378,18 +445,7 @@ hgroup {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-ul {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
-}
+
 ol {
   margin-left: 1.45rem;
   margin-right: 0;
@@ -521,25 +577,7 @@ dt {
 th {
   font-weight: bold;
 }
-li {
-  margin-bottom: calc(1.45rem / 2);
-}
-ol li {
-  padding-left: 0;
-}
-ul li {
-  padding-left: 0;
-}
-li > ol {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
-}
-li > ul {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
-}
+
 blockquote *:last-child {
   margin-bottom: 0;
 }
@@ -549,9 +587,7 @@ li *:last-child {
 p *:last-child {
   margin-bottom: 0;
 }
-li > p {
-  margin-bottom: calc(1.45rem / 2);
-}
+
 code {
   font-size: 0.85rem;
   line-height: 1.45rem;
