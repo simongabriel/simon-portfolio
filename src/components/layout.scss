@@ -88,7 +88,7 @@ ul, li { /* reset the margin and padding */
 .grid-container {
   margin-top: 128px;
   display: grid;
-  grid-template-columns: 0.6fr 1.4fr;
+  grid-template-columns: 0.4fr 1.5fr;
   grid-template-rows: 0.5fr;
   gap: 0px 56px;
   grid-template-areas:
@@ -117,14 +117,16 @@ ul, li { /* reset the margin and padding */
 
 
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 750px) {
 
   .grid-container {
-    margin-top: 24px;
+    margin-top: 24px !important;
     grid-template-columns: 1fr;
     grid-template-areas:
       "avatar-container" "header-container";
     gap: 0px 0px;
+    max-width: 550px;
+    margin: 0 auto;
   }
 
 
