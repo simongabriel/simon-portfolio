@@ -129,6 +129,13 @@ ul, li { /* reset the margin and padding */
     margin: 0 auto;
   }
 
+  .body-container{
+    p {
+      color: $blue;
+      font-size: 20px;
+    }
+  }
+
 
   .avatar-container {
 
