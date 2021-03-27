@@ -77,7 +77,7 @@ ul, li { /* reset the margin and padding */
   margin-top: 128px;
   display: grid;
   grid-template-columns: 0.6fr 1.4fr;
-  grid-template-rows: 0.5fr 1.4fr;
+  grid-template-rows: 0.5fr;
   gap: 0px 56px;
   grid-template-areas:
     "avatar-container header-container"
