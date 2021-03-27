@@ -34,9 +34,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built by
-          {` `}
-          <a href="www.twitter.com/simongabriel">Simon Gabriel</a>
+
         </footer>
       </div>
     </>

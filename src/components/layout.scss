@@ -20,16 +20,43 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
+$bd-dark: #151031;
+$pink: #FFC1F9;
+$blue: #69D6D7;
+
+
 .grid-container {
   display: grid;
-  grid-template-columns: 0.7fr 1.6fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
+  grid-template-columns: 0.6fr 1.4fr;
+  grid-template-rows: 0.5fr 1.4fr;
+  gap: 0px 56px;
   grid-template-areas:
-    "left-col right-col";
+    "avatar-container header-container"
+    "list-container body-container";
 }
-.left-col { grid-area: left-col; }
-.right-col { grid-area: right-col; }
+
+.avatar-container { grid-area: avatar-container; }
+
+.header-container { grid-area: header-container; }
+
+.body-container { grid-area: body-container; }
+
+.list-container { grid-area: list-container; }
+
+
+
+@media screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "avatar-container" "header-container" "body-container";
+    gap: 0px 0px;
+  }
+  .list-container {
+  display: none;
+}
+
+}
 
 article,
 aside,
