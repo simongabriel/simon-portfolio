@@ -13,7 +13,7 @@ const IndexPage = () => (
     <div class="avatar-container">
     <StaticImage
       src="../images/avatar.png"
-      style={{ borderRadius: 100, height: 136 }}
+      style={{height: 136}}
       width={136}
       quality={100}
       formats={["AUTO", "WEBP", "AVIF"]}
@@ -43,6 +43,7 @@ const IndexPage = () => (
       <h1>Hi, I'm Simon</h1>
       <p class="intro-text">I’m a UX/UI designer with a problem solving mindset who helps companies achieve user centric and frictionless experiences.</p>
       <div class="body-container">
+      <h2>About me</h2>
       <p>Body version; I’m a UX/UI designer with a problem solving mindset who helps companies achieve user centric and frictionless experiences.</p>
       </div>
     </div>

@@ -14,7 +14,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Barlow", serif;
+  font-family: "Barlow", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -54,11 +54,16 @@ ul, li { /* reset the margin and padding */
 
 
 .avatar-container {
+  margin: 0 auto;
   position: sticky; // See link
-  top: 0; //to make it stick to the top of the screen
-  height: 100vh; // make the height equal to 100 view height
+  top: 128px; //to make it stick to the top of the screen
+  height: 80vh; // make the height equal to 100 view height
   box-sizing: border-box;
   text-align: center;
+
+  img {
+    border-radius: 50% !important;
+  }
 
 
   .list-container {
@@ -88,10 +93,6 @@ ul, li { /* reset the margin and padding */
 .header-container { grid-area: header-container; }
 
 
-.avatar-container {
-  margin: 0 auto;
-}
-
 .list-container {
   margin: 0 auto;
   text-align: center;
@@ -109,18 +110,32 @@ ul, li { /* reset the margin and padding */
 
 
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 620px) {
 
   .grid-container {
     margin-top: 24px;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "avatar-container" "header-container" "body-container";
+      "avatar-container" "header-container";
     gap: 0px 0px;
   }
 
-  .list-container {
-  display: none;
+
+  .avatar-container {
+
+    position: inherit; // See link
+    height: auto; // make the height equal to 100 view height
+    box-sizing: border-box;
+    text-align: center;
+
+    img {
+      border-radius: 50% !important;
+    }
+
+
+    .list-container {
+      display: none;
+    }
   }
 
 }
