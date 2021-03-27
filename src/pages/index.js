@@ -13,7 +13,7 @@ const IndexPage = () => (
     <div class="avatar-container">
     <StaticImage
       src="../images/avatar.png"
-      style={{height: 136}}
+      style={{borderRadius: 100, height: 136}}
       width={136}
       quality={100}
       formats={["AUTO", "WEBP", "AVIF"]}
@@ -44,7 +44,8 @@ const IndexPage = () => (
       <p class="intro-text">I’m a UX/UI designer with a problem solving mindset who helps companies achieve user centric and frictionless experiences.</p>
       <div class="body-container">
       <h2>About me</h2>
-      <p>Body version; I’m a UX/UI designer with a problem solving mindset who helps companies achieve user centric and frictionless experiences.</p>
+      <p>One day in 1998 my dad unexpectedly brought home a computer he’d spontaneously bought. It was unlike him to do something like that. We couldn’t really afford it, and no family members really knew what to do with it. But I was 8 years old, and absolutely facinated by it.</p>
+      <p>Since then I’ve spent my life tinkering with computers and navigating my career on the back of my interest in them as creative tools for good.</p>
       </div>
     </div>
 

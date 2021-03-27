@@ -51,6 +51,13 @@ ul, li { /* reset the margin and padding */
   }
 }
 
+.body-container{
+  p {
+    color: $blue;
+    font-size: 22px;
+  }
+}
+
 
 
 .avatar-container {
@@ -378,12 +385,13 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 16px;
   color: inherit;
   font-family: "Barlow", serif;
+  text-transform: uppercase;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 24px;
   line-height: 1.1;
 }
 h3 {
